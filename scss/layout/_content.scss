@@ -1,0 +1,94 @@
+
+.item {
+	padding: 1.5em 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-decoration: none;
+	color: $brutal-pencil;
+
+	&--top {
+		justify-content: flex-start;
+	}
+
+	&--header {
+		background-image: 
+			url(/img/dog.png),
+			url(/img/dog_blured.png),
+      		linear-gradient(45deg, $subtle-ocean 0%, $subtle-biscuit 100%);
+  		background-repeat: 
+  			no-repeat,
+      		no-repeat,
+      		no-repeat;
+  		background-position: 
+      		right 30% top -10%,
+      		center center,
+      		right;
+	}
+
+	&--cats {
+		background-image:
+      		url(/img/cat.png),
+      		linear-gradient(45deg, $subtle-cream 0%, $subtle-cream 100%);
+  		background-repeat: 
+  			no-repeat,
+      		no-repeat;
+  		background-position: 
+  			right -30% top 15%,
+      		center center;
+      	background-size: 
+      		80%,
+      		100%;
+	}
+
+	&--boars {
+		background:
+			linear-gradient(45deg, $transparent-azure 0%, $transparent-azure 100%),
+    	    url(/img/lab.jpg);
+    	background-repeat: 
+  			no-repeat,
+      		no-repeat;
+      	background-size:
+      		cover,
+      		cover;
+	}
+
+	&--offer {
+		@include mixin-gradient ($brutal-green, $brutal-grass);
+	}
+
+	&--map {
+		
+	}
+
+	&--doves {
+		@include mixin-gradient ($subtle-sea, $subtle-sea);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&--grooming {
+		@include mixin-gradient ($subtle-cream, $subtle-cream);
+	}
+
+	&--devices {
+		@include mixin-gradient ($subtle-stone, $subtle-sky);
+	}
+
+	&--stuff {
+		@include mixin-gradient ($brutal-azure, $brutal-azure);
+	}
+
+	&--space {
+		@include mixin-gradient ($subtle-cream, $subtle-cream);
+	}
+
+	&--gallery {
+		@include mixin-gradient ($brutal-green, $brutal-grass);
+	}
+
+	&--footer {
+		@include mixin-gradient ($subtle-stone, $subtle-sky);
+	}
+}

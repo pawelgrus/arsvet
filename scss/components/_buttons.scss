@@ -1,0 +1,25 @@
+
+.btn {
+	@include mixin-gradient ($brutal-green, $brutal-grass);
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+	border: none;
+	padding: 0.4em 1.5em;
+    border-radius: 0.2em;
+    font-size: 1em;
+    -webkit-box-shadow: inset 0px -2px 0px 0px $subtle-avocado, 0px 3px 6px 0px $transparent-grass;
+	-moz-box-shadow: inset 0px -2px 0px 0px $subtle-avocado, 0px 3px 6px 0px $transparent-grass;
+	box-shadow: inset 0px -2px 0px 0px $subtle-avocado, 0px 3px 6px 0px $transparent-grass;
+	text-decoration: none;
+	cursor: pointer;
+
+	&:hover {
+		@include mixin-gradient (lighten($brutal-green,3%), lighten($brutal-grass,3%));
+		color: $brutal-white;
+	}
+
+	&--green {
+		color: $brutal-white;
+	}
+}

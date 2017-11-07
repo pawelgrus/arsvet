@@ -1,0 +1,81 @@
+
+@font-face {
+  font-family: 'Lato Light';
+  src: url('/fonts/lato/lato_light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Lato Regular';
+  src: url('/fonts/lato/lato_regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Crete Round';
+  src: url('/fonts/crete/crete.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+// Unitless functions system to convert px to em
+
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+  @return $pixels / $context * 1em;
+}
+
+// breakpoint mixin
+@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
+    @if $mq2 == false {
+        @media ($maxmin: $mq01) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $mq01) and (max-width: $mq2) {
+            @content;
+        }
+    }
+}
+
+// responsive font size mixin
+@mixin font-size-map($font-size-map) {
+    @each $breakpoint, $font-size in $font-size-map {
+        @if $breakpoint == null {
+            font-size: em($font-size);
+        } @else {
+            @include breakpoint($breakpoint) {
+                font-size: em($font-size);
+            }
+        }
+    }
+}
+
+// breakpoint variables
+$lg: 1170px;
+$md: 1024px;
+$sm: 640px;
+$xs: 480px;
+
+// body font size
+$browser-context: 16;
+
+// typography scale
+$body-font-size: (null: 16, $md: 12, $sm: 10, $xs: 8);
+$h1-font-size: (null: 72px);
+$h2-font-size: (null: 24px);
+
+html {
+    line-height: 1.2;
+    @include font-size-map($body-font-size);
+}
+
+h1 {
+    @include font-size-map($h1-font-size);
+}
+
+h2 {
+    @include font-size-map($h2-font-size);
+}
