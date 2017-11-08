@@ -1,8 +1,8 @@
 body {
 	font-family: 'Lato Regular', sans-serif;
 	color: $brutal-pencil;
-	font-size: 1em;
-	line-height: 1.2em;
+	font-size: 1.1em;
+	line-height: 1.4em;
 }
 
 h1 {
@@ -15,7 +15,7 @@ h1 {
 h2 {
 	font-family: 'Crete Round', serif;
 	font-size: 2.3em;
-	line-height: 1.3em;
+	line-height: 1.2em;
 	color: $brutal-agate;
 }
 
@@ -37,7 +37,7 @@ nav {
 }
 
 p {
-	padding: 0.3em 0;
+	padding: 1em 0;
 }
 
 a {
@@ -54,4 +54,8 @@ a {
 .highlighter {
 	font-family: 'Crete Round', serif;
 	color: $brutal-agate;
+}
+
+.enhance {
+	color: $brutal-nut;
 }

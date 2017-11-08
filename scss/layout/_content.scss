@@ -3,7 +3,6 @@
 	padding: 1.5em 3em;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
 	text-decoration: none;
 	color: $brutal-pencil;
 
@@ -11,7 +10,14 @@
 		justify-content: flex-start;
 	}
 
+	&--stretch {
+		justify-content: space-between;
+	}
+
 	&--header {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 		background-image: 
 			url(/img/dog.png),
 			url(/img/dog_blured.png),
@@ -90,5 +96,31 @@
 
 	&--footer {
 		@include mixin-gradient ($subtle-stone, $subtle-sky);
+	}
+}
+
+.space {
+
+	&--top {
+		padding: 2em 0 0 0;
+	}
+
+}
+
+.icon {
+	display: inline-block;
+	vertical-align: middle;
+
+	&--after:after {
+		display: inline-block;
+		vertical-align: middle;
+		font-family: 'Material Icons';
+		font-size: 1.6em;
+		content: "";
+		padding-left: .3em;
+	}
+
+	&--trending-flat:after {
+		content: 'trending_flat';
 	}
 }
