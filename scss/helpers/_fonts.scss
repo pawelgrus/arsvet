@@ -70,7 +70,7 @@
 
 
 
-
+// Uniwersal and responsive Font Map Assets. See more at http://www.modularscale.com
 // Unitless functions system to convert px to em
 
 @function em($pixels, $context: $browser-context) {
@@ -111,21 +111,34 @@
 }
 
 // breakpoint variables
+$xl: 1400px;
 $lg: 1170px;
 $md: 1024px;
-$sm: 640px;
+$sm: 576px;
 $xs: 480px;
 
 // body font size
 $browser-context: 16;
 
-// typography scale
-$body-font-size: (null: 16, $md: 12, $sm: 10, $xs: 8);
-$h1-font-size: (null: 72px);
-$h2-font-size: (null: 24px);
+// typography scale sass map
+$body-font-size: (
+  null: 17px,
+  $lg: 30px,
+  $md: 24px, 
+  $sm: 38px, 
+  $xs: 70px
+);
+
+$h1-font-size: (
+  null: 80px
+);
+
+$h2-font-size: (
+  null: 24px
+);
 
 html {
-    line-height: 1.2;
+    line-height: 1;
     @include font-size-map($body-font-size);
 }
 
