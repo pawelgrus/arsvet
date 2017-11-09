@@ -7,6 +7,44 @@
 @font-face {
   font-family: 'Crete Round';
   src: url("/fonts/crete/crete.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/material/MaterialIcons-Regular.eot);
+  /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url(/fonts/material/MaterialIcons-Regular.woff2) format("woff2"), url(/fonts/material/MaterialIcons-Regular.woff) format("woff"), url(/fonts/material/MaterialIcons-Regular.ttf) format("truetype"); }
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+.material-icons.md-2 {
+  font-size: 2em; }
+.material-icons.md-4 {
+  font-size: 4em; }
+.material-icons.md-5 {
+  font-size: 5em; }
+.material-icons.md-6 {
+  font-size: 6em; }
+
 html {
   line-height: 1.2;
   font-size: 1em; }
@@ -117,12 +155,16 @@ table {
   padding: 1.5em 3em;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   text-decoration: none;
   color: #5f5d5d; }
   .item--top {
     justify-content: flex-start; }
+  .item--stretch {
+    justify-content: space-between; }
   .item--header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url(/img/dog.png), url(/img/dog_blured.png), linear-gradient(45deg, #f3ffff 0%, #fff9ea 100%);
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-position: right 30% top -10%, center center, right; }
@@ -211,6 +253,22 @@ table {
     background: linear-gradient(45deg, #fffffd 0%, #e5fffe 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$first-color', endColorstr='$second-color', GradientType=1 ); }
 
+.space--top {
+  padding: 2em 0 0 0; }
+
+.icon {
+  display: inline-block;
+  vertical-align: middle; }
+  .icon--after:after {
+    display: inline-block;
+    vertical-align: middle;
+    font-family: 'Material Icons';
+    font-size: 1.6em;
+    content: "";
+    padding-left: .3em; }
+  .icon--trending-flat:after {
+    content: 'trending_flat'; }
+
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -257,8 +315,8 @@ table {
 body {
   font-family: 'Lato Regular', sans-serif;
   color: #5f5d5d;
-  font-size: 1em;
-  line-height: 1.2em; }
+  font-size: 1.1em;
+  line-height: 1.4em; }
 
 h1 {
   font-family: 'Crete Round', serif;
@@ -269,7 +327,7 @@ h1 {
 h2 {
   font-family: 'Crete Round', serif;
   font-size: 2.3em;
-  line-height: 1.3em;
+  line-height: 1.2em;
   color: #434399; }
 
 h3 {
@@ -287,7 +345,7 @@ nav {
   font-size: 1.2em; }
 
 p {
-  padding: 0.3em 0; }
+  padding: 1em 0; }
 
 a {
   color: #434399; }
@@ -300,6 +358,9 @@ a {
 .highlighter {
   font-family: 'Crete Round', serif;
   color: #434399; }
+
+.enhance {
+  color: #b27a74; }
 
 .schedule {
   font-size: 1.1em;
