@@ -43,8 +43,7 @@
 
             <div>
                 <h1>Gabinet Weterynaryjny</h1>
-                <h4><span class="highlighter">Piotrowice 154B</span> (18km od Lublina)</h4>
-                <p>23-107 STRZYŻEWICE</p>
+                <h4><span class="highlighter">Piotrowice 154B</span> (18km od Lublina) <br> 23-107 STRZYŻEWICE</h4>
             </div>
 
             <div>
@@ -76,11 +75,11 @@
             <h3 class="negative">Oferta</h3>
             <i class="material-icons md-5 negative">add</i>
         </div>
-        <div class="item item--map">
-            <a href="#" class="icon icon--after icon--trending-flat">Zobacz większą mapę</a>
+        <div id="map" class="item item--map">
+            <!-- <a href="#" class="icon icon--after icon--trending-flat text--bigger">Zobacz większą mapę</a> -->
         </div>
         <div class="item item--doves">
-            <h3 class="enhance">Leczenie chorób gołębi i drobiu ozdobnego</h3>
+            <h3 class="enhance">Leczenie chorób gołębi <br> i drobiu ozdobnego</h3>
             <h4>Szczepienie, Zabiegi, Profilaktyka</h4>
             <p class="space--top">
                 <a href="#" class="icon icon--after icon--trending-flat">Zobacz więcej</a>
@@ -88,22 +87,36 @@
         </div>
         <div class="item item--grooming">
             <h3 class="enhance">Usługi fryzjerskie</h3>
+            <h4>Grooming, strzyżenie i kąpiele</h4>
         </div>
         <div class="item item--devices">
             <h3>Wysokiej jakości urządzenia diagnostyczne</h3>
+            <p class="typography--intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis totam numquam asperiores maxime ratione aliquid perspiciatis, vel expedita ipsa blanditiis distinctio aliquam! Quibusdam molestiae magnam soluta cum voluptatem nam pariatur quae delectus distinctio neque obcaecati ullam, laborum ipsum, aliquam non maxime excepturi eum. Asperiores quisquam aspernatur aliquam repudiandae id, consectetur!</p>
+            <p class="space--top">
+                <a href="#" class="icon icon--after icon--trending-flat">Zobacz więcej</a>
+            </p>
         </div>
         <div class="item item--stuff">
             <h3 class="negative">Wykwalifikowana kadra lekarska</h3>
-            <p class="space--top negative">Kadra lekarska to wykwalifikowani specjaliści weterynarii nagrodzeni wieloma certyfikatami i nagrodami.</p>
+            <p class="typography--intro negative">Kadra lekarska to wykwalifikowani specjaliści weterynarii nagrodzeni wieloma certyfikatami i nagrodami.</p>
             <p class="negative">Do każdego zwierzaka podchodzimy indywidualnie i bardzo troskliwie. Umiejętnie obchodzimy się z pacjentem. Wiele lat praktyki gwarantuje najlepszą opiekę nad Twoim pupilem.</p>
         </div>
         <div class="item item--space">
             <h3 class="enhance">Parking</h3>
+            <i class="material-icons md-5 enhance">add</i>
         </div>
         <div class="item item--gallery">
             <h3 class="negative">Galeria</h3>
+            <i class="material-icons md-5 negative">add</i>
         </div>
-        <div class="item item--footer"></div>
+        <div class="item item--footer">
+            <div class="address">
+                <p>Piotrowice 154B, 23-107 STRZYŻEWICE <br> przychodnia@arsvet.pl <br> tel.: +48 509 951 781</p>
+            </div>
+            <div class="arr">
+                <p>2018 Arsvet Przychodnia Weterynarii. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
     </div>
 
     <!-- jQuery -->
@@ -111,6 +124,24 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Google Map-->
+    <script>
+        function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlx18bAs16dpNcf97mcq5RKvrLylN2auc&callback=initMap">
+    </script>
 
 </body>
 

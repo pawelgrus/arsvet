@@ -119,18 +119,10 @@ $sm: 576px;
 $xs: 480px;
 
 // body font size
-$browser-context: 16;
+$browser-context: 12px;
 
 // typography scale sass map
 $h1-font-size: (
-  null: 80px,
-  $lg: 56px,
-  $md: 56px, 
-  $sm: 56px,
-  $xs: 56px
-);
-
-$h2-font-size: (
   null: 56px,
   $lg: 56px,
   $md: 56px, 
@@ -138,7 +130,7 @@ $h2-font-size: (
   $xs: 56px
 );
 
-$h3-font-size: (
+$h2-font-size: (
   null: 48px,
   $lg: 48px,
   $md: 48px, 
@@ -146,36 +138,44 @@ $h3-font-size: (
   $xs: 48px
 );
 
+$h3-font-size: (
+  null: 40px,
+  $lg: 40px,
+  $md: 40px, 
+  $sm: 40px,
+  $xs: 40px
+);
+
 $h4-font-size: (
-  null: 32px,
-  $lg: 32px,
-  $md: 32px, 
-  $sm: 32px,
-  $xs: 32px
+  null: 21px,
+  $lg: 21px,
+  $md: 21px, 
+  $sm: 21px,
+  $xs: 21px
 );
 
 $h5-font-size: (
-  null: 23px,
-  $lg: 23px,
-  $md: 23px, 
-  $sm: 23px,
-  $xs: 23px
+  null: 12px,
+  $lg: 12px,
+  $md: 12px, 
+  $sm: 12px,
+  $xs: 12px
 );
 
 $h6-font-size: (
-  null: 22px,
-  $lg: 22px,
-  $md: 22px, 
-  $sm: 22px,
-  $xs: 22px
+  null: 11px,
+  $lg: 11px,
+  $md: 11px, 
+  $sm: 11px,
+  $xs: 11px
 );
 
 $body-font-size: (
-  null: 17px,
-  $lg: 17px,
-  $md: 17px, 
-  $sm: 17px, 
-  $xs: 17px
+  null: 12px,
+  $lg: 12px,
+  $md: 12px, 
+  $sm: 12px, 
+  $xs: 12px
 );
 
 
@@ -185,31 +185,60 @@ $body-font-size: (
 
 
 
-html {
-    line-height: 1;
-    @include font-size-map($body-font-size);
-}
+// html {
+//     line-height: 1;
+//     @include font-size-map($body-font-size);
+// }
+
+// h1 {
+//     @include font-size-map($h1-font-size);
+// }
+
+// h2 {
+//     @include font-size-map($h2-font-size);
+// }
+
+// h3 {
+//     @include font-size-map($h3-font-size);
+// }
+
+// h4 {
+//     @include font-size-map($h4-font-size);
+// }
+
+// h5 {
+//     @include font-size-map($h5-font-size);
+// }
+
+// h6 {
+//     @include font-size-map($h6-font-size);
+// }
+
+// p {
+//   @include font-size-map($body-font-size);
+// }
+
 
 h1 {
-    @include font-size-map($h1-font-size);
-}
-
-h2 {
-    @include font-size-map($h2-font-size);
+  font-size: 4em;
+  line-height: 1.2;
+  letter-spacing: 0.00342em;
 }
 
 h3 {
-    @include font-size-map($h3-font-size);
+  font-size: 2.4em;
+  letter-spacing: 0.0132em;
 }
 
 h4 {
-    @include font-size-map($h4-font-size);
+  font-size: 1.6em;
+  line-height: 1.4;
 }
 
-h5 {
-    @include font-size-map($h5-font-size);
+p {
+  font-size: 1.2em;
+  line-height: 1.4;
+  letter-spacing: .00128em;
+  padding: 0.2em 0;
 }
 
-h6 {
-    @include font-size-map($h6-font-size);
-}

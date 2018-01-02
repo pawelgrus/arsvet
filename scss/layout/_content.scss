@@ -1,6 +1,6 @@
 
 .item {
-	padding: 1.5em 3em 3.5em 3em;
+	padding: 2em 3em;
 	display: flex;
 	flex-direction: column;
 	text-decoration: none;
@@ -72,10 +72,37 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		background-color: $subtle-sea;
+		background-image:
+      		url(/img/pidgeon.png);
+  		background-repeat: 
+  			no-repeat,
+      		no-repeat;
+  		background-position: 
+  			right 0 top 0,
+      		center center;
+      	background-size: 
+      		46%,
+      		100%;
+      	h3 {
+      		text-align: center;
+      	}
 	}
 
 	&--grooming {
-		@include mixin-gradient ($subtle-cream, $subtle-cream);
+		background-image:
+      		url(/img/york.png),
+      		linear-gradient(45deg, $subtle-cream 0%, $subtle-cream 100%);
+  		background-repeat: 
+  			no-repeat,
+      		no-repeat;
+  		background-position: 
+  			right 0 top 60%,
+      		center center;
+      	background-size: 
+      		65%,
+      		100%;
 	}
 
 	&--devices {
@@ -96,15 +123,17 @@
 
 	&--footer {
 		@include mixin-gradient ($subtle-stone, $subtle-sky);
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+    	align-items: flex-end;
 	}
 }
 
-.space {
-
-	&--top {
-		padding: 2em 0 0 0;
+.typography {
+	&--intro {
+		padding-top: 1.8em;
 	}
-
 }
 
 .icon {
