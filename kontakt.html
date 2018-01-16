@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ARSVET</title>
+
+    <!-- Custom CSS -->
+    <link href="css/base.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="container container--contact">
+        <div class="item item--header-contact">
+            <nav class="menu">
+                <ul class="menu_list">
+                    <li class="logo">
+                        <img src="/img/logo.svg" alt="">
+                    </li>
+                </ul>
+            </nav>
+
+            <div>
+                <h1>Adres</h1>
+                <h4><span class="highlighter">Piotrowice 154B</span> (18km od Lublina) <br> 23-107 STRZYŻEWICE</h4>
+            </div>
+
+        </div>
+        <div class="item item--mail item--top">
+            <h3 class="link enhance">arsvet@gmail.com</h3>
+            <h4>Napisz do nas mail</h4>
+        </div>
+        <div class="item item--telephone item--top">
+            <h3 class="negative">+48 509 951 781</h3>
+            <h4 class="negative">Kontakt telefoniczny</h4>
+        </div>
+        <div class="item item--map">
+            <h3 class="enhance">Zobacz jak dojechać</h3>
+            <p class="space--top">
+                <a href="#" class="icon icon--after icon--trending-flat">Pokaż mapę dojazdu</a>
+            </p>
+        </div>
+        <div class="item item--footer">
+            <div class="address">
+                <img src="img/veterinary.png" alt="">
+                <p>Piotrowice 154B, 23-107 STRZYŻEWICE <br> przychodnia@arsvet.pl <br> tel.: +48 509 951 781</p>
+            </div>
+            <div class="arr">
+                <p>2018 &reg;&copy; Arsvet Przychodnia Weterynarii. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Google Map-->
+    <script>
+        function initMap() {
+            var uluru = {lat: -25.363, lng: 131.044};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlx18bAs16dpNcf97mcq5RKvrLylN2auc&callback=initMap">
+    </script>
+
+</body>
+
+</html>

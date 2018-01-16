@@ -32,6 +32,13 @@
       		right;
 	}
 
+	&--header-contact {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		background: linear-gradient(45deg, $subtle-ocean 0%, $subtle-biscuit 100%);
+	}
+
 	&--cats {
 		background-image:
       		url(/img/cat.png),
@@ -47,6 +54,10 @@
       		100%;
 	}
 
+	&--mail {
+		background: linear-gradient(45deg, $subtle-cream 0%, $subtle-cream 100%);
+	}
+
 	&--boars {
 		background:
 			linear-gradient(45deg, $transparent-azure 0%, $transparent-azure 100%),
@@ -59,12 +70,24 @@
       		cover;
 	}
 
+	&--telephone {
+		background: linear-gradient(45deg, $transparent-azure 0%, $transparent-azure 100%),
+	}
+
 	&--offer {
 		@include mixin-gradient ($brutal-green, $brutal-grass);
 	}
 
 	&--map {
-		
+		@include mixin-gradient ($subtle-sea, $subtle-sea);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		background-color: $subtle-sea;
+      	h3 {
+      		text-align: center;
+      	}
 	}
 
 	&--doves {
@@ -151,5 +174,14 @@
 
 	&--trending-flat:after {
 		content: 'trending_flat';
+	}
+}
+
+.address {
+	display: flex;
+	align-items: center;
+	
+	img {
+		padding-right: 2em;
 	}
 }
