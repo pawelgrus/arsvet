@@ -1,0 +1,18 @@
+.container {
+
+	&--contact {
+
+		.item {
+
+			&--header {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				background: linear-gradient(45deg, $subtle-ocean 0%, $subtle-biscuit 100%);
+			}
+
+		}
+
+	}
+
+}
