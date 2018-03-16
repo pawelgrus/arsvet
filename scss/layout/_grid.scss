@@ -2,10 +2,10 @@
 .container {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-	grid-auto-rows: 30vh;
 	grid-gap: 0;
 
 	&--home {
+		grid-auto-rows: 30vh;
 
 		.item {
 
@@ -72,6 +72,7 @@
 	}
 
 	&--contact {
+		grid-auto-rows: 30vh;
 
 		.item {
 
@@ -104,12 +105,21 @@
 	}
 
 	&--offer {
+		grid-template-rows: 30vh 30vh auto;
 
 		.item {
 
 			&--header {
 				grid-column: 1 / 6;
 				grid-row: 1 / 3;
+			}
+
+			&--element-left {
+				grid-column: 1 / 3;
+			}
+
+			&--element-right {
+				grid-column: 3 / 6;
 			}
 
 		}
