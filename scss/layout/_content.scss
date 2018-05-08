@@ -46,7 +46,7 @@
 	}
 
 	&--telephone {
-		background: linear-gradient(45deg, $transparent-azure 0%, $transparent-azure 100%),
+		background: $brutal-agate,
 	}
 
 	&--offer {
@@ -159,4 +159,14 @@
 	img {
 		padding-right: 2em;
 	}
+}
+
+.list {
+	color: $subtle-avocado;
+	list-style-type: square;
+	font-size: 1.2em;
+    line-height: 1.4;
+    letter-spacing: .00128em;
+    padding: 0.2em 0;
+    margin-bottom: 1em;
 }
