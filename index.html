@@ -77,9 +77,7 @@
             <h3 class="negative">Oferta</h3>
             <i class="material-icons md-5 negative">add</i>
         </a>
-        <div id="map" class="item item--map">
-            <!-- <a href="#" class="icon icon--after icon--trending-flat text--bigger">Zobacz większą mapę</a> -->
-        </div>
+        <div id="map" class="item item--map"></div>
         <div class="item item--doves">
             <h3 class="enhance">Leczenie chorób gołębi <br> i drobiu ozdobnego</h3>
             <h4>Szczepienie, Zabiegi, Profilaktyka</h4>
@@ -132,10 +130,10 @@
     <!-- Google Map-->
     <script>
         function initMap() {
-            var uluru = {lat: -25.363, lng: 131.044};
+            var uluru = {lat: 51.08691, lng: 22.478214};
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 4,
-                center: uluru
+                zoom: 15,
+                center: new google.maps.LatLng(51.08691,22.478214),
             });
             var marker = new google.maps.Marker({
                 position: uluru,
@@ -144,8 +142,34 @@
         }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlx18bAs16dpNcf97mcq5RKvrLylN2auc&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?callback=initMap">
     </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </body>
 
