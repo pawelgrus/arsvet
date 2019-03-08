@@ -3,6 +3,7 @@
 	&--offer {
 
 		.item {
+			flex-direction: 
 
 			&--header {
 				display: flex;
@@ -17,6 +18,20 @@
 		  		background-position: 
 		      		center center,
 		      		right;
+			}
+
+			&--services {
+
+				.flexy {
+					display: flex;
+					flex-direction: row;
+
+					.element {
+						flex-basis: 50%;
+						flex-shrink: 0;
+					}
+				}
+				
 			}
 
 		}

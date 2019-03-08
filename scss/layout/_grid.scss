@@ -105,7 +105,8 @@
 	}
 
 	&--offer {
-		grid-template-rows: 30vh 30vh auto;
+		// grid-auto-rows: 30vh;
+		grid-template-rows: 30vh 30vh auto auto;
 
 		.item {
 
@@ -114,12 +115,14 @@
 				grid-row: 1 / 3;
 			}
 
-			&--element-left {
-				grid-column: 1 / 3;
+			&--services {
+				grid-column: 1 / 6;
+				grid-row: 3 / 4;
 			}
 
-			&--element-right {
-				grid-column: 3 / 6;
+			&--footer {
+				grid-column: 1 / 6;
+				grid-row: 4 / 5;
 			}
 
 		}
@@ -128,3 +131,157 @@
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		grid-gap: 0;
+
+		&--home {
+			grid-auto-rows: 30vh;
+
+			.item {
+
+				&--header {
+					grid-column: 1 / 6;
+					grid-row: 1 / 3;
+				}
+
+				&--cats {
+					grid-column: 1 / 6;
+					grid-row: 3 / 4;
+				}
+
+				&--boars {
+					grid-column: 1 / 6;
+					grid-row: 4 / 5;
+				}
+
+				&--offer {
+					grid-column: 1 / 6;
+					grid-row: 4 / 5;
+				}
+
+				&--map {
+					grid-column: 1 / 6;
+					grid-row: 3 / 5;
+				}
+
+				&--doves {
+					grid-column: 1 / 6;
+					grid-row: 5 / 8;
+				}
+
+				&--grooming {
+					grid-column: 1 / 6;
+					grid-row: 8 / 9;
+				}
+
+				&--devices {
+					grid-column: 1 / 6;
+					grid-row: 9 / 11;
+				}
+
+				&--stuff {
+					grid-column: 1 / 6;
+					grid-row: 8 / 10;
+				}
+
+				&--space {
+					grid-column: 1 / 6;
+					grid-row: 10 / 11;
+				}
+
+				&--gallery {
+					grid-column: 1 / 6;
+					grid-row: 10 / 11;
+				}
+
+				&--footer {
+					grid-column: 1 / 6;
+					grid-row: 11 / 12;
+				}
+			}
+		}
+
+		&--contact {
+			grid-auto-rows: 30vh;
+
+			.item {
+
+				&--header {
+					grid-column: 1 / 6;
+					grid-row: 1 / 3;
+				}
+
+				&--mail {
+					grid-column: 1 / 3;
+					grid-row: 3 / 4;
+				}
+
+				&--telephone {
+					grid-column: 3 / 6;
+					grid-row: 3 / 4;
+				}
+
+				&--map {
+					grid-column: 1 / 6;
+					grid-row: 4 / 6;
+				}
+
+				&--footer {
+					grid-column: 1 / 6;
+					grid-row: 6 / 7;
+				}
+
+			}
+		}
+
+		&--offer {
+			grid-auto-rows: 30vh;
+			grid-template-columns: auto;
+
+			.item {
+
+				&--header {
+					grid-column: 1 / 6;
+					grid-row: 1 / 2;
+				}
+
+				&--services {
+					grid-column: 1 / 6;
+					grid-row: 2 / 3;
+				}
+
+				&--footer {
+					grid-column: 1 / 6;
+				}
+
+			}
+
+		}
+
+	}
+
+}
