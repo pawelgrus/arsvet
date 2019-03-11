@@ -58,6 +58,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding: 0;
+		margin: 0;
 
 		background-color: $subtle-sea;
       	h3 {
@@ -164,6 +166,7 @@
 .list {
 	color: $subtle-avocado;
 	list-style-type: square;
+	list-style-position: inside;
 	font-size: 1.2em;
     line-height: 1.4;
     letter-spacing: .00128em;
